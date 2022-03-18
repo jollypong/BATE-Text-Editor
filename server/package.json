@@ -7,8 +7,8 @@
         "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Jollypong",
+    "license": "ISC, MIT",
     "dependencies": {
         "express": "^4.17.1"
     },
