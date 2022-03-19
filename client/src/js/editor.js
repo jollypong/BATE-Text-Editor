@@ -1,5 +1,5 @@
 // Import methods to save and get data from the indexedDB database in './database.js'
-import { getAllDb, postDb } from './database';
+import { getAllDb, putDb } from './database';
 import { header } from './header';
 
 export default class {
@@ -36,7 +36,7 @@ export default class {
     // Save the content of the editor when the editor loses focus
     this.editor.on('blur', () => {
       console.log('The editor has lost focus');
-      postDb(localStorage.getItem('content'));
+      putDb(localStorage.getItem('content'));
     });
   }
 }

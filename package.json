@@ -1,5 +1,5 @@
 {
-  "name": "text-editor",
+  "name": "best-alltime-text-editor",
   "version": "1.0.0",
   "description": "Text editor created using PWA to create notes or code snippets with or without an internet connection",
   "main": "server.js",

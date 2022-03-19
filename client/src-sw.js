@@ -20,7 +20,7 @@ const matchCallback = ({ request }) => {
         request.destination === 'style' ||
         // JavaScript
         request.destination === 'script' ||
-        //images (logo)
+        // images (logo)
         request.destination === 'image'
     );
 };
