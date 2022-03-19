@@ -22,7 +22,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE List'
+        title: 'BATE List'
       }),
       new MiniCssExtractPlugin(),
       new GenerateSW(),
@@ -32,16 +32,17 @@ module.exports = () => {
       }), 
       new WebpackPwaManifest({
         // 
-        name: 'JATE',
-        short_name: 'JATE',
+        name: 'best-alltime-text-editor',
+        short_name: 'BATE',
         description: 'Text-Editor Progressive Web App!',
         background_color: '#ffffff',
         start_url: "/",
-        // publicPath: "/",
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        publicPath: "/",
+        fingerprints: false, 
+        inject: true, 
         icons: [
           {
-            src: path.resolve('./src/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
             destination: path.join('assets','icons'),
           },
