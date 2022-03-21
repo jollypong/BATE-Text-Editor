@@ -1,6 +1,5 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import { registerSW } from './register-sw';
 import './database';
 import '../css/style.css';
 
@@ -32,6 +31,3 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
-
-// Call registerSW method
-registerSW();

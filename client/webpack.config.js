@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const path = require('path');
 
@@ -27,7 +26,6 @@ module.exports = () => {
         title: 'BATE List'
       }),
       new MiniCssExtractPlugin(),
-      new GenerateSW(),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
