@@ -28,6 +28,9 @@ if ('serviceWorker' in navigator) {
   // register workbox service worker
   const workboxSW = new Workbox('/src-sw.js');
   workboxSW.register();
+  // window.addEventListener('load', () => {
+  //   navigator.serviceWorker.register('/src-sw.js');
+  // });
   console.log('Service Worker supported!')
 } else {
   console.error('Service workers are not supported in this browser.');
