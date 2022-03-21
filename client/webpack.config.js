@@ -12,8 +12,6 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      editor: './src/js/editor.js',
-      database: './src/js/database.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -30,12 +28,12 @@ module.exports = () => {
       }), 
       new WebpackPwaManifest({
         // 
-        name: 'Best-Alltime-Text-Editor',
+        name: 'Best All-time Text Editor',
         short_name: 'BATE',
         description: 'Text-Editor Progressive Web App!',
-        display: "fullscreen", 
         orientation: "portrait",
         background_color: '#ffffff',
+        theme_color: '#ffffff',
         start_url: "/",
         publicPath: "/",
         fingerprints: false, 
@@ -43,7 +41,7 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [48, 96], // multiple sizes
+            sizes: [48, 96, 128, 192], // multiple sizes
             destination: path.join('assets','icons'),
           },
         ],
@@ -53,7 +51,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.css$/i,
+          test: /\.css$/,
           use: ['style-loader', 'css-loader'],
         },
         {
