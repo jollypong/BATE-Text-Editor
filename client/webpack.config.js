@@ -34,9 +34,11 @@ module.exports = () => {
       }), 
       new WebpackPwaManifest({
         // 
-        name: 'best-alltime-text-editor',
+        name: 'Best-Alltime-Text-Editor',
         short_name: 'BATE',
         description: 'Text-Editor Progressive Web App!',
+        display: "fullscreen", 
+        orientation: "portrait",
         background_color: '#ffffff',
         start_url: "/",
         publicPath: "/",
@@ -45,7 +47,7 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            sizes: [48, 96], // multiple sizes
             destination: path.join('assets','icons'),
           },
         ],
